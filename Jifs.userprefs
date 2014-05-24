@@ -1,9 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Jifs.Core/packages.config">
     <Files>
-      <File FileName="Jifs.Core/packages.config" Line="1" Column="1" />
+      <File FileName="Jifs.Core/packages.config" Line="8" Column="7" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Platforms" expanded="True">
+            <Node name="Jifs.iOS" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

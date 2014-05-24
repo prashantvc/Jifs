@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2012
 VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jifs", "Jifs.Core\Jifs.csproj", "{01D130B4-F763-4F39-AF86-2B3B5EB95E95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{BA4F52FA-E3B4-49B3-90DC-50C09307EFA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jifs.Tests", "Jifs.Tests\Jifs.Tests.csproj", "{D06157C7-7F7F-4811-9AB5-36E626B5EDB9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jifs.iOS", "Jifs.iOS\Jifs.iOS.csproj", "{F964BDFC-0556-4144-9868-E2103AAFA777}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jifs.Tests", "Jifs.Tests\Jifs.Tests.csproj", "{D06157C7-7F7F-4811-9AB5-36E626B5EDB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,7 +99,8 @@ Global
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|Mixed Platforms.ActiveCfg = AppStore|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|Mixed Platforms.Deploy.0 = AppStore|iPhone
-		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|iPhone.Build.0 = Debug|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|iPhone.Deploy.0 = Debug|iPhone
@@ -120,10 +121,13 @@ Global
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Release|Mixed Platforms.Build.0 = Release|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Release|Mixed Platforms.Deploy.0 = Release|iPhone
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F964BDFC-0556-4144-9868-E2103AAFA777} = {BA4F52FA-E3B4-49B3-90DC-50C09307EFA7}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Jifs.iOS\Jifs.iOS.csproj
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

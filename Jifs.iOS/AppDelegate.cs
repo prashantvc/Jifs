@@ -4,6 +4,7 @@ using System.Linq;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Xamarin.Forms;
 
 namespace Jifs.iOS
 {
@@ -25,11 +26,13 @@ namespace Jifs.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Forms.Init();
+
             // create a new window instance based on the screen size
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             // If you have defined a view, add it here:
-            // window.RootViewController  = navigationController;
+             window.RootViewController  = App.GetMainPage().CreateViewController();
 
             // make the window visible
             window.MakeKeyAndVisible();
