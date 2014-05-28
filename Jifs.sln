@@ -99,8 +99,8 @@ Global
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|Mixed Platforms.ActiveCfg = AppStore|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|Mixed Platforms.Deploy.0 = AppStore|iPhone
-		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|Any CPU.Build.0 = Debug|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|iPhone.Build.0 = Debug|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Debug|iPhone.Deploy.0 = Debug|iPhone

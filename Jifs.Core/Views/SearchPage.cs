@@ -7,7 +7,8 @@ namespace Jifs.Views
 	{
 		public SearchPage ()
 		{
-			Title = "Search";
+			Title = "Translate";
+			Icon = "microphone.png";
 		}
 	}
 }

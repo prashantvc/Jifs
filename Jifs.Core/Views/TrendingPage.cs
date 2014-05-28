@@ -8,12 +8,14 @@ namespace Jifs.Views
 		public TrendingPage ()
 		{
 			Title = "Trending";
+			Icon = "uptrend.png";
 
 			var imageList = new ListView {
-				RowHeight = 40
+				RowHeight = 200
 			};
 
 			imageList.SetBinding (ListView.ItemsSourceProperty, "TrendingItems");
+			imageList.ItemTemplate = new DataTemplate (typeof(JifCell));
 
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.FillAndExpand,
