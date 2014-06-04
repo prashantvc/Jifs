@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using ViewModels;
 
 namespace Jifs.Views
 {
@@ -8,6 +9,8 @@ namespace Jifs.Views
 		public TrendingPage ()
 		{
 			Title = "Trending";
+
+			BindingContext = new TrendingViewModel ();
 
 			var imageList = new ListView {
 				RowHeight = 200

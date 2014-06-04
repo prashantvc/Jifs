@@ -7,13 +7,8 @@ namespace Jifs.Views
 	{
 		public SearchPage ()
 		{
-			Title = "Translate";
-			Icon = "microphone.png";
+			Title = "Search";
+			Icon = "search.png";
 		}
-	}
-
-	class TranslatePage: ContentPage
-	{
-
 	}
 }

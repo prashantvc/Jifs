@@ -7,19 +7,11 @@ namespace Jifs
 {
 	public static class App
 	{
+		static MainPage mainPage;
+
 		public static Page GetMainPage ()
 		{
-//			var trendingPage = new TrendingPage {
-//				BindingContext = new TrendingViewModel ()
-//			};
-//
-//			var searchPage = new SearchPage ();
-//
-//			return new TabbedPage { 
-//				Children = { trendingPage, searchPage }
-//			};
-
-			return new MainPage ();
+			return mainPage ?? (mainPage = new MainPage ());
 		}
 	}
 }
