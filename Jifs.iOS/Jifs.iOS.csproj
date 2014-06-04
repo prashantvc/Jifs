@@ -133,9 +133,15 @@
   </Target>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
-    <BundleResource Include="Resources\uptrend.png" />
-    <BundleResource Include="Resources\microphone.png" />
     <BundleResource Include="Resources\slideout.png" />
     <BundleResource Include="Resources\slideout%402x.png" />
+    <BundleResource Include="Resources\search.png" />
+    <BundleResource Include="Resources\search%402x.png" />
+    <BundleResource Include="Resources\uptrend.png" />
+    <BundleResource Include="Resources\uptrend%402x.png" />
+    <BundleResource Include="Resources\microphone.png" />
+    <BundleResource Include="Resources\microphone%402x.png" />
+    <BundleResource Include="Resources\gears.png" />
+    <BundleResource Include="Resources\gears%402x.png" />
   </ItemGroup>
 </Project>

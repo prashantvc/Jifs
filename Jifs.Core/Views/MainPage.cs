@@ -31,7 +31,7 @@ namespace Views
 					Padding = new Thickness (10, 36, 0, 5),
 					BackgroundColor = Color.Transparent,
 					Content = new Label {
-						Text = "MENU",
+						Text = "JIFS",
 						Font = Font.SystemFontOfSize (NamedSize.Medium)
 					}
 				};
@@ -39,9 +39,9 @@ namespace Views
 				layout.Children.Add (label);
 
 				var listView = new ListView ();
-				var cell = new DataTemplate (typeof(TextCell));
+				var cell = new DataTemplate (typeof(ImageCell));
 				cell.SetBinding (TextCell.TextProperty, BaseViewModel.TitlePropertyName);
-				//cell.SetBinding (ImageCell.ImageSourceProperty, "Icon");
+				cell.SetBinding (ImageCell.ImageSourceProperty, "Icon");
 
 				listView.ItemTemplate = cell;
 				listView.ItemsSource = mainViewModel.MenuItems;
