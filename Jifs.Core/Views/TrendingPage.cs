@@ -8,7 +8,6 @@ namespace Jifs.Views
 		public TrendingPage ()
 		{
 			Title = "Trending";
-			Icon = "uptrend.png";
 
 			var imageList = new ListView {
 				RowHeight = 200

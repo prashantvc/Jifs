@@ -7,6 +7,28 @@ namespace ViewModels
 
 	class BaseViewModel : INotifyPropertyChanged
 	{
+		public const string TitlePropertyName = "Title";
+		public const string IconPropertyName = "Icon";
+
+
+		string icon;
+		public string Icon {
+			get { return icon; }
+			set {
+				icon = value;
+				OnPropertyChanged ();
+			}
+		}
+
+		string title;
+		public string Title {
+			get { return title; }
+			set {
+				title = value;
+				OnPropertyChanged ();
+			}
+		}
+
 		bool isBusy;
 
 		public bool IsBusy {
@@ -29,5 +51,8 @@ namespace ViewModels
 		}
 
 	}
+
+
+
 	
 }

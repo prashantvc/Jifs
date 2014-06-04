@@ -11,4 +11,9 @@ namespace Jifs.Views
 			Icon = "microphone.png";
 		}
 	}
+
+	class TranslatePage: ContentPage
+	{
+
+	}
 }
