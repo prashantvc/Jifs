@@ -53,6 +53,8 @@ namespace Jifs
             return JsonConvert.DeserializeObject<T>(content);
         }
 
+		//async Task<Task>
+
         static string GetRequestUrl(string urlPart)
         {
             return string.Format("{0}&api_key={1}", urlPart, APIKey);

@@ -19,7 +19,7 @@ namespace ViewModels
 			Icon = "slideout.png";
 			MenuItems = new ObservableCollection<MenuItem> { 
 				new MenuItem(MenuType.Trending, "Trending", "uptrend.png"),
-				new MenuItem(MenuType.Translate, "Translate", "microphone.png"),
+				new MenuItem(MenuType.Translate, "Translator", "microphone.png"),
 				new MenuItem(MenuType.Search, "Search", "search.png")
 			};
 		}

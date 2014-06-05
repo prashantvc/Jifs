@@ -14,7 +14,7 @@ namespace ViewModels
 
 		public TrendingViewModel ()
 		{
-			context = new JifContext ();
+			context = App.Context;
 
 			LoadTrendingItems ();
 		}
