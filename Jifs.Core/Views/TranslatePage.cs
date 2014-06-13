@@ -29,10 +29,18 @@ namespace Jifs.Views
 			};
 			translateButton.SetBinding (Button.CommandProperty, "Translate");
 
+			var imageView = new Image {
+				HorizontalOptions = LayoutOptions.CenterAndExpand,
+				VerticalOptions = LayoutOptions.CenterAndExpand,
+				Aspect = Aspect.AspectFill
+			};
+			imageView.SetBinding (Image.SourceProperty, "ImageUrl");
+
+
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Padding = 20, 
-				Children = { text, translateButton }
+				Children = { text, translateButton, imageView }
 			};
 		}
 	}

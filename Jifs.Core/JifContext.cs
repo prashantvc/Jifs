@@ -45,6 +45,11 @@ namespace Jifs
             return await GetResponseAsyc<Image>(url);
         }
 
+		public async Task<TranslatedImage> TranslateAsync(string word){
+			string url = GetRequestUrl ("translate?s=" + word);
+			return await GetResponseAsyc <TranslatedImage>(url);
+		}
+
         async Task<T> GetResponseAsyc<T>(string url)
         {
             var response = await _httpClient.GetAsync(url);
@@ -52,8 +57,6 @@ namespace Jifs
             string content = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<T>(content);
         }
-
-		//async Task<Task>
 
         static string GetRequestUrl(string urlPart)
         {

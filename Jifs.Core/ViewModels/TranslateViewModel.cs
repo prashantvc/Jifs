@@ -18,6 +18,14 @@ namespace ViewModels
 			}
 		}
 
+		public string ImageUrl {
+			get{ return imageUrl; }
+			set {
+				imageUrl = value;
+				OnPropertyChanged ();
+			}
+		}
+
 		bool Method (object obj)
 		{
 			return !string.IsNullOrEmpty (TranslateText);
@@ -27,16 +35,23 @@ namespace ViewModels
 			get {
 				return translateCommand ??
 				(translateCommand = new AsyncCommand (TranslateHandler, 
-		                                        Method));
+					Method));
 			}
 		}
 
 		async Task TranslateHandler ()
 		{
-			return;
+			if (string.IsNullOrEmpty (TranslateText)) {
+				return;
+			}
+
+			var image = await App.Context.TranslateAsync (TranslateText);
+			ImageUrl = image.data.images.fixed_width.url;
 		}
 
 		string translateText;
+		string imageUrl;
+		//TODO: string mediaUrl;
 		AsyncCommand translateCommand;
 	}
 

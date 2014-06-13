@@ -80,7 +80,10 @@
 
 		public string height { get; set; }
 
-
+		public string mp4 {
+			get;
+			set;
+		}
 	}
 
 	public class Fixed_Height_Still
@@ -108,6 +111,11 @@
 		public string width { get; set; }
 
 		public string height { get; set; }
+
+		public string mp4 {
+			get;
+			set;
+		}
 	}
 
 	public class Fixed_Width_Still
@@ -140,5 +148,15 @@
 		public string size { get; set; }
 
 		public string frames { get; set; }
+
+		public string mp4 {
+			get;
+			set;
+		}
+	}
+
+	public class TranslatedImage
+	{
+		public Datum data { get; set; }
 	}
 }
