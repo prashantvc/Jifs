@@ -1,6 +1,7 @@
 using System;
 using Xamarin.Forms;
 using ViewModels;
+using Xamarin.Forms.Labs;
 
 namespace Jifs.Views
 {
@@ -22,6 +23,15 @@ namespace Jifs.Views
 			text.SetBinding (Entry.TextProperty, "TranslateText");
 
 
+			var videoView = new Video{ 
+				MinimumHeightRequest = 200,
+				MinimumWidthRequest = 300,
+				ShowMediaControls = false,
+				CanLoop = true,
+				ShouldAutoPlay = true
+			};
+			videoView.SetBinding (Video.SourceProperty, "MediaUrl");
+
 			var translateButton = new Button { 
 				Text = "Translate",
 				BackgroundColor = Helpers.Color.Green.ToFormsColor (),
@@ -29,18 +39,12 @@ namespace Jifs.Views
 			};
 			translateButton.SetBinding (Button.CommandProperty, "Translate");
 
-			var imageView = new Image {
-				HorizontalOptions = LayoutOptions.CenterAndExpand,
-				VerticalOptions = LayoutOptions.CenterAndExpand,
-				Aspect = Aspect.AspectFill
-			};
-			imageView.SetBinding (Image.SourceProperty, "ImageUrl");
 
 
 			Content = new StackLayout {
 				VerticalOptions = LayoutOptions.StartAndExpand,
 				Padding = 20, 
-				Children = { text, translateButton, imageView }
+				Children = { videoView, text, translateButton }
 			};
 		}
 	}

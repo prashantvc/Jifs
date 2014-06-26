@@ -26,6 +26,14 @@ namespace ViewModels
 			}
 		}
 
+		public string MediaUrl {
+			get{ return mediaUrl; }
+			set {
+				mediaUrl = value;
+				OnPropertyChanged ();
+			}
+		}
+
 		bool Method (object obj)
 		{
 			return !string.IsNullOrEmpty (TranslateText);
@@ -46,12 +54,13 @@ namespace ViewModels
 			}
 
 			var image = await App.Context.TranslateAsync (TranslateText);
-			ImageUrl = image.data.images.fixed_width.url;
+			MediaUrl = image.data.images.fixed_width.mp4;
+
 		}
 
 		string translateText;
 		string imageUrl;
-		//TODO: string mediaUrl;
+		string mediaUrl;
 		AsyncCommand translateCommand;
 	}
 
