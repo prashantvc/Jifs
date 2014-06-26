@@ -5,14 +5,7 @@ namespace Xamarin.Forms.Labs
 {
 	public class Video : View
 	{
-		public static readonly BindableProperty AspectProperty =
-			BindableProperty.Create ("Aspect", typeof(Aspect), typeof(Video), Aspect.AspectFit);
-
-		public Aspect Aspect {
-			get { return (Aspect)GetValue (AspectProperty); }
-			set{ SetValue (AspectProperty, value); }
-		}
-
+	
 		public static readonly BindableProperty ShowControlsProperty =
 			BindableProperty.Create ("ShowControls", typeof(bool), typeof(Video), true);
 
