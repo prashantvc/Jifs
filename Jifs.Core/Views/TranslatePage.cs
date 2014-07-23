@@ -23,7 +23,7 @@ namespace Jifs.Views
 			text.SetBinding (Entry.TextProperty, "TranslateText");
 
 
-			var videoView = new Video{ 
+			var videoView = new Video { 
 				MinimumHeightRequest = 200,
 				MinimumWidthRequest = 300,
 				ShowMediaControls = false,
@@ -39,12 +39,12 @@ namespace Jifs.Views
 			};
 			translateButton.SetBinding (Button.CommandProperty, "Translate");
 
-
-
-			Content = new StackLayout {
-				VerticalOptions = LayoutOptions.StartAndExpand,
-				Padding = 20, 
-				Children = { videoView, text, translateButton }
+			Content = new ScrollView {
+				Content = new StackLayout {
+					VerticalOptions = LayoutOptions.StartAndExpand,
+					Padding = 20, 
+					Children = { text, translateButton, videoView }
+				}
 			};
 		}
 	}
