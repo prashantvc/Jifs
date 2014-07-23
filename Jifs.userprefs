@@ -1,13 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Jifs.Core/Labs/Video.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Desktop items/Xamarin/80355/Test/Test/Test/Test/TestMasterDetailPage.cs">
     <Files>
-      <File FileName="Jifs.Core/ViewModels/TrendingViewModel.cs" Line="28" Column="4" />
-      <File FileName="Jifs.Core/Labs/Video.cs" Line="14" Column="1" />
+      <File FileName="../../Desktop items/Xamarin/80355/Test/Test/Test/Test/TestMasterDetailPage.cs" Line="37" Column="5" />
+      <File FileName="../../Desktop items/Xamarin/80355/Test/Test/Test/Test/MasterMenu.cs" Line="58" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/prashantvc/Desktop items/Xamarin/80355/Test/Test/Test/Test/TestMasterDetailPage.cs" line="30" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Jifs.Core/Views/JifCell.cs" line="15" offsetX="785" offsetY="238" expression="image.Source" liveUpdate="False" />
