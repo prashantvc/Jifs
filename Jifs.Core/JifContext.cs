@@ -12,6 +12,8 @@ namespace Jifs
         const string APIKey = "dc6zaTOxFJmzC";
         readonly HttpClient _httpClient;
 
+		//http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC 
+
         public JifContext()
         {
             _httpClient = new HttpClient { BaseAddress = new Uri(BaseUrl) };
