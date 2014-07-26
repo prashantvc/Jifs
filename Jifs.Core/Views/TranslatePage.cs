@@ -33,9 +33,7 @@ namespace Jifs.Views
 			videoView.SetBinding (Video.SourceProperty, "MediaUrl");
 
 			var translateButton = new Button { 
-				Text = "Translate",
-				BackgroundColor = Helpers.Color.Green.ToFormsColor (),
-				TextColor = Color.White
+				Text = "Translate"
 			};
 			translateButton.SetBinding (Button.CommandProperty, "Translate");
 
