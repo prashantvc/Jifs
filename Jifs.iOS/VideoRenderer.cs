@@ -25,7 +25,9 @@ namespace Xamarin.Forms.Labs
 
 			moviePlayer.ContentUrl = NSUrl.FromString (Element.Source);
 			moviePlayer.Play ();
+
 		}
+
 
 		protected override void OnElementChanged (ElementChangedEventArgs<Video> e)
 		{
@@ -35,7 +37,10 @@ namespace Xamarin.Forms.Labs
 			moviePlayer.ShouldAutoplay = true;
 			moviePlayer.SourceType = MPMovieSourceType.Streaming; //TODO: Add file streaming too
 			moviePlayer.View.Frame = new System.Drawing.RectangleF (0, 0, (float)Element.MinimumWidthRequest, (float)Element.MinimumHeightRequest);
-
+			moviePlayer.ScalingMode = MPMovieScalingMode.AspectFill;
+			NSNotificationCenter.DefaultCenter.AddObserver (MPMoviePlayerController.PlaybackStateDidChangeNotification, n => {
+				Console.WriteLine ("{0}, {1}", Element.Source, moviePlayer.PlaybackState);
+			});
 			SetNativeControl (moviePlayer.View);
 
 			SetMediaControls ();
@@ -47,6 +52,16 @@ namespace Xamarin.Forms.Labs
 		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
 		{
 			base.OnElementPropertyChanged (sender, e);
+
+			if (e.PropertyName == "Play") {
+				moviePlayer.Play ();
+				return;
+			}
+
+			if (e.PropertyName == "Stop") {
+				moviePlayer.Stop ();
+				return;
+			}
 
 			if (e.PropertyName == Video.SourceProperty.PropertyName) {
 				SetSource ();
@@ -63,6 +78,7 @@ namespace Xamarin.Forms.Labs
 		{
 			moviePlayer.ControlStyle = Element.ShowMediaControls ? 
 				MPMovieControlStyle.Default : MPMovieControlStyle.None;
+
 		}
 
 		void SetAutoPlayStatus ()

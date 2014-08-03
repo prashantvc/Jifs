@@ -23,7 +23,7 @@ namespace ViewModels
 		{
 			IsBusy = true;
 			var items = await context.GetTrendingAsync ();
-			Debug.WriteLine (items);
+
 			TrendingItems = items.data;
 		}
 

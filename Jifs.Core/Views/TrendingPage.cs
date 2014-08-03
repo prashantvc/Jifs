@@ -1,6 +1,8 @@
 ﻿using System;
 using Xamarin.Forms;
 using ViewModels;
+using System.Diagnostics;
+using Jifs.Model;
 
 namespace Jifs.Views
 {
@@ -24,6 +26,7 @@ namespace Jifs.Views
 				Children = { imageList }
 			};
 		}
+
 	}
 
 }

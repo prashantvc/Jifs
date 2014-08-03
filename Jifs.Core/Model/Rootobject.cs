@@ -1,4 +1,7 @@
-﻿namespace Jifs.Model
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace Jifs.Model
 {
 	public class Rootobject
 	{
@@ -32,7 +35,7 @@
 		public string msg { get; set; }
 	}
 
-	public class Datum
+	public class Datum 
 	{
 		public string type { get; set; }
 
@@ -53,6 +56,12 @@
 		public string rating { get; set; }
 
 		public string source { get; set; }
+
+		public bool IsImageVisible {
+			get;
+			set;
+		}
+
 	}
 
 	public class Images

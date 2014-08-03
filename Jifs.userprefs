@@ -1,18 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Jifs.Core/Views/MainPage.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Jifs.iOS/VideoRenderer.cs">
     <Files>
-      <File FileName="../../Desktop items/Xamarin/80355/Test/Test/Test/Test/TestMasterDetailPage.cs" Line="33" Column="14" />
-      <File FileName="../../Desktop items/Xamarin/80355/Test/Test/Test/Test/MasterMenu.cs" Line="1" Column="1" />
-      <File FileName="Jifs.Core/App.cs" Line="1" Column="1" />
-      <File FileName="Jifs.Core/Views/MainPage.cs" Line="33" Column="6" />
+      <File FileName="Jifs.Core/Views/JifCell.cs" Line="32" Column="4" />
+      <File FileName="Jifs.Core/Labs/Video.cs" Line="1" Column="1" />
+      <File FileName="Jifs.iOS/VideoRenderer.cs" Line="17" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/prashantvc/Work/Jifs/Jifs.Core/Model/Rootobject.cs" line="1" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Jifs.Core/Views/JifCell.cs" line="15" offsetX="785" offsetY="238" expression="image.Source" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.ItemProperties.Platforms.Jifs.Android AndroidDeviceId-Debug="015d4b1009302014" />
 </Properties>

@@ -5,6 +5,11 @@ namespace Xamarin.Forms.Labs
 {
 	public class Video : View
 	{
+		public void Stop ()
+		{
+			OnPropertyChanged("Stop");
+		}
+
 	
 		public static readonly BindableProperty ShowControlsProperty =
 			BindableProperty.Create ("ShowControls", typeof(bool), typeof(Video), true);
@@ -38,6 +43,11 @@ namespace Xamarin.Forms.Labs
 		public bool CanLoop {
 			get { return (bool)GetValue (CanLoopProperty); }
 			set { SetValue (CanLoopProperty, value); }
+		}
+
+		public void Play ()
+		{
+			OnPropertyChanged ("Play");
 		}
 	}
 }
