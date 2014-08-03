@@ -22,15 +22,12 @@ namespace Jifs.Views
 			};
 			text.SetBinding (Entry.TextProperty, "TranslateText");
 
-
-			var videoView = new Video { 
-				MinimumHeightRequest = 200,
-				MinimumWidthRequest = 300,
-				ShowMediaControls = false,
-				CanLoop = true,
-				ShouldAutoPlay = true
+			var animatedImage = new GifImage {
+				HeightRequest = 200,
+				WidthRequest = 300,
+				//BackgroundColor = Color.Blue
 			};
-			videoView.SetBinding (Video.SourceProperty, "MediaUrl");
+			animatedImage.SetBinding (GifImage.SourceProperty, "MediaUrl");
 
 			var translateButton = new Button { 
 				Text = "Translate"
@@ -41,7 +38,7 @@ namespace Jifs.Views
 				Content = new StackLayout {
 					VerticalOptions = LayoutOptions.StartAndExpand,
 					Padding = 20, 
-					Children = { text, translateButton, videoView }
+					Children = { text, translateButton, animatedImage }
 				}
 			};
 		}

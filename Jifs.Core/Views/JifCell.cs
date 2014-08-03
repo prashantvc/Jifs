@@ -22,16 +22,6 @@ namespace Jifs.Views
 				WidthRequest = 320
 			};
 
-			videoView = new Video { 
-				MinimumHeightRequest = 200,
-				MinimumWidthRequest = 320,
-				ShowMediaControls = false,
-				CanLoop = true,
-				ShouldAutoPlay = false
-			};
-
-			videoView.SetBinding (Video.SourceProperty, "images.fixed_width.mp4");
-
 			image.SetBinding (Image.SourceProperty, "images.fixed_width_still.url");
 
 			var indicator = new ActivityIndicator { Color = new Color (.5), };
@@ -41,13 +31,10 @@ namespace Jifs.Views
 
 			grid = new Grid ();
 			grid.RowDefinitions.Add (new RowDefinition ());
-			grid.Children.Add (videoView);
 			grid.Children.Add (image);
 			grid.Children.Add (indicator);
 
 			View = grid;
-
-			//videoView.IsVisible = false;
 		}
 
 		protected override void OnDisappearing ()
