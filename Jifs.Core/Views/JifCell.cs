@@ -52,7 +52,6 @@ namespace Jifs.Views
 			base.OnTapped ();
 			image.IsVisible = false;
 
-			videoView.Play ();
 		}
 
 		Datum Context {
@@ -60,5 +59,6 @@ namespace Jifs.Views
 				return (Datum)BindingContext; 
 			}
 		}
+
 	}
 }

@@ -6,6 +6,7 @@ using FLAnimation;
 using MonoTouch.UIKit;
 using System.Drawing;
 using MonoTouch.Foundation;
+using SDWebImage;
 
 
 [assembly: ExportRenderer (typeof(GifImage), typeof(GifImageRenderer))]
@@ -29,17 +30,34 @@ namespace Jifs.iOS
 			SetNativeControl (imageView);
 		}
 
-		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
+		protected async override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
 		{
 			base.OnElementPropertyChanged (sender, e);
 
 			if (e.PropertyName == GifImage.SourceProperty.PropertyName) {
+
+				System.Console.WriteLine (Element.Source);
 				var url = NSUrl.FromString (Element.Source);
-				var data = NSData.FromUrl (url);
-				var animatedImage = new FLAnimatedImage (data);
+
+				var request = new NSMutableUrlRequest (url);
+				var response = cache.CachedResponseForRequest (request);
+				FLAnimatedImage animatedImage = null;
+
+				if (response != null) {
+					animatedImage = new FLAnimatedImage (response.Data);
+					Control.AnimatedImage = animatedImage;
+					return;
+				}
+
+				var urlResponse = await NSUrlConnection.SendRequestAsync (request, NSOperationQueue.MainQueue);
+				cache.StoreCachedResponse (new NSCachedUrlResponse (urlResponse.Response, urlResponse.Data), request);
+
+				animatedImage = new FLAnimatedImage (urlResponse.Data);
 				Control.AnimatedImage = animatedImage;
 			}
 		}
+
+		readonly NSUrlCache cache = NSUrlCache.SharedCache;
 	}
 }
 
