@@ -8,7 +8,7 @@ namespace ViewModels
 {
 	class MainViewModel : BaseViewModel
 	{
-		public ObservableCollection<MenuItem> MenuItems {
+		public ObservableCollection<Menu> MenuItems {
 			get;
 			set;
 		}
@@ -17,10 +17,10 @@ namespace ViewModels
 		{
 			Title = "Jifs";
 			Icon = "slideout.png";
-			MenuItems = new ObservableCollection<MenuItem> { 
-				new MenuItem(MenuType.Trending, "Trending", "uptrend.png"),
-				new MenuItem(MenuType.Translate, "Translator", "microphone.png"),
-				new MenuItem(MenuType.Search, "Search", "search.png")
+			MenuItems = new ObservableCollection<Menu> { 
+				new Menu(MenuType.Trending, "Trending", "uptrend.png"),
+				new Menu(MenuType.Translate, "Translator", "microphone.png"),
+				new Menu(MenuType.Search, "Search", "search.png")
 			};
 		}
 	}

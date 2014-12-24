@@ -22,6 +22,8 @@ namespace Jifs.Views
 			search.SetBinding (SearchBar.SearchCommandProperty, "SearchCommand");
 			search.SetBinding (SearchBar.TextProperty, "SearchText");
 
+			Editor e = new Editor ();
+
 
 			var results = new ListView {
 				RowHeight = 200

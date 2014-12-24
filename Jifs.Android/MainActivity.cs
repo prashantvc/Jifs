@@ -8,6 +8,9 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
+using Android.OS;
+using System.Reflection;
+
 
 namespace Jifs.Android
 {
@@ -19,6 +22,7 @@ namespace Jifs.Android
 			base.OnCreate (bundle);
 			Forms.Init (this, bundle);
 			SetPage (App.GetMainPage ());
+			//Android.OS.Environment.GetExternalStoragePublicDirectory();
 		}
 	}
 }

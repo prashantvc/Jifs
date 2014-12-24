@@ -54,7 +54,7 @@ namespace ViewModels
 			}
 
 			var image = await App.Context.TranslateAsync (TranslateText);
-			MediaUrl = image.data.images.fixed_width.url;
+			MediaUrl = image.data.images.fixed_width.mp4;
 
 		}
 

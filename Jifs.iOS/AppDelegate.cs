@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
@@ -26,6 +23,18 @@ namespace Jifs.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+
+//			NSDictionary *infoDictionary = [[NSBundle mainBundle]infoDictionary];
+//
+//			NSString *build = infoDictionary[(NSString*)kCFBundleVersionKey];
+//			NSString *bundleName = infoDictionary[(NSString *)kCFBundleNameKey]; 
+
+			var infoDictionary = NSBundle.MainBundle.InfoDictionary;
+			var build = infoDictionary[new NSString ("CFBundleVersion")];
+			var version = infoDictionary[new NSString ("CFBundleShortVersionString")];
+
+
+
             Forms.Init();
 
             // create a new window instance based on the screen size

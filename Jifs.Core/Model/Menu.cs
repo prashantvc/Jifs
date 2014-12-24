@@ -5,9 +5,9 @@ using System.Collections.ObjectModel;
 
 namespace Model
 {
-	class MenuItem
+	class Menu
 	{
-		public MenuItem (MenuType menuType, string title, string icon)
+		public Menu (MenuType menuType, string title, string icon)
 		{
 			MenuType = menuType;
 			Title = title;

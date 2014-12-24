@@ -6,6 +6,8 @@ using Xamarin.Forms.Labs;
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
 using Xamarin.Forms;
+using MonoTouch.CoreVideo;
+
 
 [assembly: ExportRenderer (typeof(Video), typeof(VideoRenderer))]
 
@@ -16,6 +18,7 @@ namespace Xamarin.Forms.Labs
 		void SetSource ()
 		{
 			if (string.IsNullOrEmpty (Element.Source)) {
+
 				return;
 			}
 
@@ -24,8 +27,10 @@ namespace Xamarin.Forms.Labs
 			}
 
 			moviePlayer.ContentUrl = NSUrl.FromString (Element.Source);
-			moviePlayer.Play ();
 
+			if (Element.ShouldAutoPlay) {
+				moviePlayer.Play ();
+			}
 		}
 
 
@@ -33,20 +38,30 @@ namespace Xamarin.Forms.Labs
 		{
 			base.OnElementChanged (e);
 
-			moviePlayer = new MPMoviePlayerController ();
-			moviePlayer.ShouldAutoplay = true;
-			moviePlayer.SourceType = MPMovieSourceType.Streaming; //TODO: Add file streaming too
-			moviePlayer.View.Frame = new System.Drawing.RectangleF (0, 0, (float)Element.MinimumWidthRequest, (float)Element.MinimumHeightRequest);
-			moviePlayer.ScalingMode = MPMovieScalingMode.AspectFill;
-			NSNotificationCenter.DefaultCenter.AddObserver (MPMoviePlayerController.PlaybackStateDidChangeNotification, n => {
-				Console.WriteLine ("{0}, {1}", Element.Source, moviePlayer.PlaybackState);
-			});
-			SetNativeControl (moviePlayer.View);
+			if (Control == null) {
+				moviePlayer = new MPMoviePlayerController ();
+				moviePlayer.ShouldAutoplay = true;
+				moviePlayer.SourceType = MPMovieSourceType.Streaming; //TODO: Add file streaming too
+				moviePlayer.View.Frame = new System.Drawing.RectangleF (0, 0, (float)Element.MinimumWidthRequest, (float)Element.MinimumHeightRequest);
+				moviePlayer.ScalingMode = MPMovieScalingMode.AspectFill;
 
-			SetMediaControls ();
-			SetAutoPlayStatus ();
-			SetLoopState ();
-			SetSource ();
+				SetNativeControl (moviePlayer.View);
+			}
+
+			if (e.OldElement != null) {
+				NSNotificationCenter.DefaultCenter.RemoveObserver (this);
+			}
+
+			if (e.NewElement != null && Element != null) {
+				NSNotificationCenter.DefaultCenter.AddObserver (MPMoviePlayerController.PlaybackStateDidChangeNotification, n => {
+					Console.WriteLine ("{0}, {1}", Element.Source, moviePlayer.PlaybackState);
+				});
+				SetMediaControls ();
+				SetAutoPlayStatus ();
+				SetLoopState ();
+				SetSource ();
+			}
+
 		}
 
 		protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)

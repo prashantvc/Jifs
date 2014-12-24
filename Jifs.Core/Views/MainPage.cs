@@ -16,7 +16,7 @@ namespace Views
 			Detail = Trends;
 
 			masterPage.SelectedMenuChange += (sender, e) => {
-				var seletedItem = e.SelectedItem as MenuItem;
+				var seletedItem = e.SelectedItem as Menu;
 				if (seletedItem == null) {
 					return;
 				}
@@ -35,9 +35,11 @@ namespace Views
 
 				IsPresented = false;
 			};
-		}
 
-		MenuItem SelectedItem { get; set; }
+		}
+			
+
+		Menu SelectedItem { get; set; }
 
 		Page Trends {
 			get {

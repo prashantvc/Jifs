@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>Jifs.iOS</string>
+	<string>Jifs for iOS</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.your-company.Jifs.iOS</string>
 	<key>CFBundleShortVersionString</key>
@@ -21,8 +21,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>7.1</string>
+	<string>6.0</string>
 	<key>NSMainNibFile</key>
+	<string></string>
+	<key>Custom Property</key>
 	<string></string>
 </dict>
 </plist>

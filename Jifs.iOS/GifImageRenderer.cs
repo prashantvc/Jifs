@@ -17,17 +17,19 @@ namespace Jifs.iOS
 		protected override void OnElementChanged (ElementChangedEventArgs<GifImage> e)
 		{
 			base.OnElementChanged (e);
+			if (Control == null) {
+				var imageView = new FLAnimatedImageView {
+					ContentMode = UIViewContentMode.ScaleAspectFill,
+					ClipsToBounds = true,
+					Frame = new RectangleF (0, 0, (float)Element.WidthRequest, (float)Element.HeightRequest)
+				};
 
-			var imageView = new FLAnimatedImageView {
-				ContentMode = UIViewContentMode.ScaleAspectFill,
-				ClipsToBounds = true,
-				Frame = new RectangleF (0, 0, (float)Element.WidthRequest, (float)Element.HeightRequest)
-			};
+				imageView.Layer.BorderColor = UIColor.Red.CGColor;
+				imageView.Layer.BorderWidth = 2;
 
-			imageView.Layer.BorderColor = UIColor.Red.CGColor;
-			imageView.Layer.BorderWidth = 2;
+				SetNativeControl (imageView);
+			}
 
-			SetNativeControl (imageView);
 		}
 
 		protected async override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)

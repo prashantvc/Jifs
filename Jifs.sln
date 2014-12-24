@@ -68,7 +68,6 @@ Global
 		{68B0AF46-34C0-4015-AA63-DAF16017206C}.Ad-Hoc|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{68B0AF46-34C0-4015-AA63-DAF16017206C}.Ad-Hoc|Mixed Platforms.Build.0 = Release|Any CPU
 		{68B0AF46-34C0-4015-AA63-DAF16017206C}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{68B0AF46-34C0-4015-AA63-DAF16017206C}.AppStore|Any CPU.Build.0 = Release|Any CPU
 		{68B0AF46-34C0-4015-AA63-DAF16017206C}.AppStore|iPhone.ActiveCfg = Release|Any CPU
 		{68B0AF46-34C0-4015-AA63-DAF16017206C}.AppStore|iPhone.Build.0 = Release|Any CPU
 		{68B0AF46-34C0-4015-AA63-DAF16017206C}.AppStore|iPhoneSimulator.ActiveCfg = Release|Any CPU
@@ -125,6 +124,7 @@ Global
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Ad-Hoc|Mixed Platforms.Build.0 = Ad-Hoc|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.Ad-Hoc|Mixed Platforms.Deploy.0 = Ad-Hoc|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
+		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|Any CPU.Build.0 = AppStore|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|iPhone.Build.0 = AppStore|iPhone
 		{F964BDFC-0556-4144-9868-E2103AAFA777}.AppStore|iPhone.Deploy.0 = AppStore|iPhone

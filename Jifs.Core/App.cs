@@ -13,6 +13,8 @@ namespace Jifs
 		public static Page GetMainPage ()
 		{
 			return mainPage ?? (mainPage = new MainPage ());
+
+
 		}
 
 		public static JifContext Context{

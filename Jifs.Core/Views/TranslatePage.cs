@@ -22,12 +22,15 @@ namespace Jifs.Views
 			};
 			text.SetBinding (Entry.TextProperty, "TranslateText");
 
-			var animatedImage = new GifImage {
+			var animatedImage = new Video {
 				HeightRequest = 200,
 				WidthRequest = 300,
+				ShouldAutoPlay = true,
+				ShowMediaControls = false,
+				CanLoop = true
 				//BackgroundColor = Color.Blue
 			};
-			animatedImage.SetBinding (GifImage.SourceProperty, "MediaUrl");
+			animatedImage.SetBinding (Video.SourceProperty, "MediaUrl");
 
 			var translateButton = new Button { 
 				Text = "Translate"
